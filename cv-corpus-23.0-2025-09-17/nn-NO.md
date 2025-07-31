@@ -24,6 +24,8 @@ Extended Latin:
 
 * [Merging Norwegian Nynorsk and Norwegian Bokmål](https://discourse.mozilla.org/t/merging-norwegian-nynorsk-and-norwegian-bokmal/130474)
 
+# History
+
 # Datasheet authors
 
 * Francis M. Tyers <...@...>
