@@ -2,6 +2,11 @@
 
 ## Text corpus
 
+### Sources
+
+* [Korpus med bokomtalar frå Bokelskere.no](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-53/)
+* [Stortingskorpuset 1.1](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-58/)
+
 ### Writing system
 
 Extended Latin:
