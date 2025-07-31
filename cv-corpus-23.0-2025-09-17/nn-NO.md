@@ -1,5 +1,11 @@
 # *Norsk Nynorsk* -- Norwegian Nynorsk (`nn-no`)
 
+## Language
+
+### Variants
+
+### Pre-defined accents
+
 ## Text corpus
 
 ### Sources
