@@ -79,10 +79,21 @@ Eg gler meg også til å lesa.
 
 ### Sources
 
-* [Korpus med bokomtalar frå Bokelskere.no](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-53/)
-* [Stortingskorpuset 1.1](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-58/)
+* [Korpus med bokomtalar frå Bokelskere.no](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-53/) (Public domain)
+* [Stortingskorpuset 1.1](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-58/) (Public domain)
 
 ### Processing
+
+Both sources include sentences in both Norwegian Nynorsk and Norwegian Bokmål.
+
+Norwegian Nynorsk candidate sentences were extracted by both excluding Bokmål-only words and including 
+Nynorsk-only words:
+
+|------------|------------|
+| Bokmål-only |  *ikke*, *jeg*, *en*, *et*, *fra*, *hun*, *noen*, *være*, *mer*, *ble*, *mye*, *bare*, *boken*, *kommer*, *flere*, *dem*  |
+| Nynorsk-only |  *eg*, *ikkje*, *ein*, *me*, *vere*, *meir*, *fleire*, *berre*, *ho*, *eit*, *blei*, *vart*  | 
+
+These candidate sentences were then checked by two writers of Nynorsk before inclusion into the corpus.
 
 # Community links
 
