@@ -57,11 +57,25 @@ There are currently no pre-defined accents.
 
 ## Text corpus
 
+The average length of sentences is 7 tokens (42 characters).
+
 ### Writing system
 
 Norwegian is written in the Latin script. The text corpus also contains a limited amount of punctuation.
 
 **Alphabet**: `a å æ b c d e é è f g h i j k l m n o ò ø p q r s t u v w x y z ! - . ?`
+
+### Sample
+
+There follows a randomly selected sample of five sentences from the corpus.
+
+```
+Dette med følg boka skjønte eg heller ikkje heilt vitsen med.
+Eg har ikkje mykje om kap.
+Ei rettssak er i grunnen ein fin måte å stille ting i relieff på.
+Kva er forklaringa på at regjeringa enno ikkje har følgt dette opp?
+Eg gler meg også til å lesa.
+```
 
 ### Sources
 
