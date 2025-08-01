@@ -101,7 +101,7 @@ These candidate sentences were then checked by two writers of Nynorsk before inc
 
 ## Discussion
 
-* [Merging Norwegian Nynorsk and Norwegian Bokmål](https://discourse.mozilla.org/t/merging-norwegian-nynorsk-and-norwegian-bokmal/130474)o
+* [Merging Norwegian Nynorsk and Norwegian Bokmål](https://discourse.mozilla.org/t/merging-norwegian-nynorsk-and-norwegian-bokmal/130474)
 
 # History
 
