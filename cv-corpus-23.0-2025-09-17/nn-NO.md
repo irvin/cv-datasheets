@@ -38,9 +38,9 @@ There are currently no pre-defined accents.
 
 | Gender | Frequency |
 |--------|-----------|
-| `male\_masculine` | 686 |
-| `undeclared` | 331 |
-| `female\_feminine` | 165 |
+| male, masculine | 686 |
+| undeclared | 331 |
+| female, feminine | 165 |
 
 
 ### Age
@@ -57,17 +57,18 @@ There are currently no pre-defined accents.
 
 ## Text corpus
 
+### Writing system
+
+Norwegian is written in the Latin script. The text corpus also contains a limited amount of punctuation.
+
+**Alphabet**: `a å æ b c d e é è f g h i j k l m n o ò ø p q r s t u v w x y z ! - . ?`
+
 ### Sources
 
 * [Korpus med bokomtalar frå Bokelskere.no](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-53/)
 * [Stortingskorpuset 1.1](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-58/)
 
 ### Processing
-
-### Writing system
-
-Extended Latin:
-* `a å æ b c d e é è f g h i j k l m n o ò ø p q r s t u v w x y z ! - . ?`
 
 # Community links
 
