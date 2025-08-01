@@ -86,9 +86,11 @@ Eg gler meg også til å lesa.
 
 # Community links
 
+* [Common Voice translators on Pontoon](https://pontoon.mozilla.org/nn-NO/common-voice/contributors/)
+
 ## Discussion
 
-* [Merging Norwegian Nynorsk and Norwegian Bokmål](https://discourse.mozilla.org/t/merging-norwegian-nynorsk-and-norwegian-bokmal/130474)
+* [Merging Norwegian Nynorsk and Norwegian Bokmål](https://discourse.mozilla.org/t/merging-norwegian-nynorsk-and-norwegian-bokmal/130474)o
 
 # History
 
