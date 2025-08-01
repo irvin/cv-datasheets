@@ -8,7 +8,7 @@ of the West of Norway.
 
 ### Variants
 
-There 
+There are currently no variants defined for Norwegian Nynorsk.
 
 ### Accents
 
@@ -17,6 +17,9 @@ There
 There are currently no pre-defined accents.
 
 #### User defined
+
+The following accents have been defined by contributors. The frequency refers to how many 
+clips are annotated with this accent.
 
 | Accent                                        | Frequency |
 |-----------------------------------------------|-----------|
@@ -36,6 +39,8 @@ There are currently no pre-defined accents.
 
 ### Gender
 
+Self-declared gender information, frequency refers to the number of clips annotated with this gender.
+
 | Gender | Frequency |
 |--------|-----------|
 | male, masculine | 686 |
@@ -44,6 +49,8 @@ There are currently no pre-defined accents.
 
 
 ### Age
+
+Self-declared age information, frequency refers to the number of clips annotated with this age band.
 
 | Age band | Frequency |
 |----------|-----------|
