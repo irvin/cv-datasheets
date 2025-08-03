@@ -65,6 +65,17 @@ Self-declared age information, frequency refers to the number of clips annotated
 | teens | 24 |
 | fifties | 2 |
 
+### Clips per contributor
+
+| Number of clips recorded | Number of contributors |
+|-----|---------|
+|0-10|19|
+|10-50|12|
+|50-100|1|
+|100-500|4|
+|500-1000|0|
+|> 1000|0|
+
 
 ## Text corpus
 
