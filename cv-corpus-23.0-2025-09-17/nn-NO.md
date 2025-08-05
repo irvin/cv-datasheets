@@ -106,12 +106,14 @@ Eg gler meg også til å lesa.
 ### Sources
 
 * [Korpus med bokomtalar frå Bokelskere.no](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-53/) (Public domain)
+* [Stortingskorpuset 1.1](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-58/) (Public domain)
 * Individual sentences submitted by users through the Mozilla Common Voice interface (Public domain)
 
 ### Text domains
 
 The corpus was initially seeded with sentences from
 * Book reviews and book discussions (from the web community bokelskere.no)
+* Transcribed and manually checked discussions from the Norwegian Parliament (Stortinget), from 2017 to 2018
 
 Later, several individual users have contributed sentences in various
 domains through Mozilla's web interface.
