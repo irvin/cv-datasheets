@@ -3,7 +3,7 @@
 This datasheet is for the Mozilla Common Voice (MCV) dataset for Tatar (tt),
 version `22.0-2025-06-25`.
 
-## Language Introduction
+## Language
 
 Tatar is a Turkic language spoken by Tatars mainly located in modern Tatarstan
 (European Russia), as well as parts of Siberia and Central Asia. It is the
@@ -136,7 +136,7 @@ The dataset uses the following characters.
 - [Common Voice Tatar](https://commonvoice.mozilla.org/tt)
 * [Common Voice translators on Pontoon](https://pontoon.mozilla.org/tt/common-voice/contributors/)
 
-> **This language is in dire need of new sentences!** There are not enough
+> **This language is in need of new sentences!** There are not enough
 > unique sentences for people to record. Please consider contributing new public
 > domain sentences via the Common Voice's [Write
 > page](https://commonvoice.mozilla.org/tt/write)
