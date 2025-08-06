@@ -6,7 +6,6 @@ import logging
 import os
 import random
 import sys
-import textwrap
 from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, List
@@ -22,6 +21,8 @@ except ImportError:
 # --- SCRIPT CONSTANTS ---
 SENTENCE_THRESHOLD = 1000
 AVG_CLIPS_THRESHOLD = 5
+# Set a new, larger field size limit for the CSV reader to handle long fields.
+CSV_FIELD_SIZE_LIMIT = 10000000
 
 # --- Configure Logging ---
 logger = logging.getLogger(__name__)
@@ -281,6 +282,9 @@ def main():
         level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
     )
 
+    logger.info(f"Setting CSV field size limit to {CSV_FIELD_SIZE_LIMIT}")
+    csv.field_size_limit(CSV_FIELD_SIZE_LIMIT)
+
     parser = argparse.ArgumentParser(
         description="Generate a datasheet for a Mozilla Common Voice dataset using the Google GenAI SDK."
     )
@@ -302,6 +306,12 @@ def main():
     lang_code = base_path.name
     lang_name_map = {
         "kk": "Kazakh",
+        "ky": "Kyrgyz",
+        "uz": "Uzbek",
+        "az": "Azerbaijani",
+        "tg": "Tajik",
+        "ru": "Russian",
+        "tr": "Turkish",
         "en": "English",
         "nn-NO": "Norwegian Nynorsk",
         "tt": "Tatar",
@@ -316,7 +326,9 @@ def main():
     invalidated_clips = read_tsv(base_path / "invalidated.tsv")
     all_clips_durations = read_tsv(base_path / "clip_durations.tsv")
     validated_sentences = read_tsv(base_path / "validated_sentences.tsv")
-    invalidated_sentences_data = read_tsv(base_path / "invalidated.tsv")
+    invalidated_sentences_data = read_tsv(
+        base_path / "unvalidated_sentences.tsv"
+    )
     durations_map = {
         row["clip"]: int(row["duration[ms]"]) for row in all_clips_durations
     }
