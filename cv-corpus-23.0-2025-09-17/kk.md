@@ -125,8 +125,8 @@ The text for this dataset comes from the following sources:
   her help with reviewing these proverbs, as well as with translating the web
   interface of Common voice into Kazakh.
 
-* Individual senteces submitted by users through the Mozilla Common Voice
-  interface (Public domain)
+* Individual sentences submitted by users through the Mozilla Common Voice
+  interface (public domain)
 
 ### Alphabet
 
@@ -149,7 +149,7 @@ The alphabet used in the dataset's text corpus.
 ## Community Links
 
 - [Common Voice Kazakh](https://commonvoice.mozilla.org/kk)
-* [Common Voice translators on Pontoon](https://pontoon.mozilla.org/nn-NO/common-voice/contributors/)
+* [Common Voice translators on Pontoon](https://pontoon.mozilla.org/kk/common-voice/contributors/)
 
 ## Fun Fact
 
@@ -162,9 +162,7 @@ vowels). This phonological rule is a hallmark of many Turkic languages.
 
 * Ilnar Salimzianov <mdc.ilnar@gmail.com>
 
----
-
-## Make Your Voice Heard
+***
 
 Help us grow the Kazakh dataset and empower developers to build new and
 exciting voice applications for your language.

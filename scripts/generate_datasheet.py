@@ -1,4 +1,24 @@
 #!/usr/bin/env python3
+"""
+Generates or updates a detailed markdown datasheet for a Mozilla Common Voice
+dataset using the Google Gemini Pro API.
+
+This script performs the following steps:
+1.  Calculates detailed statistics from a Common Voice dataset directory,
+    including clip and sentence counts, recording hours, demographic data,
+    contributor statistics, and text corpus analysis.
+2.  Optionally reads an existing markdown datasheet for the same language.
+3.  Constructs a highly specific, detailed prompt for the Gemini Pro model,
+    bundling the new statistics and, if applicable, the existing markdown.
+4.  Instructs the AI to either generate a new datasheet from scratch or
+    intelligently update the existing one by replacing only the auto-generated
+    statistical sections while preserving manual, human-written content.
+5.  The prompt includes modern calls to action reflecting the current Common
+    Voice contribution workflow (Speak, Listen, Write, Review) and adds
+    other engaging content like a "Fun Fact" about the language.
+6.  Outputs both the raw JSON data sent to the API and the final,
+    AI-generated markdown to standard output.
+"""
 import argparse
 import csv
 import json
@@ -8,9 +28,8 @@ import random
 import sys
 from collections import Counter
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
-# Import from the new 'google-genai' SDK
 try:
     from google import genai
 except ImportError:
@@ -21,7 +40,6 @@ except ImportError:
 # --- SCRIPT CONSTANTS ---
 SENTENCE_THRESHOLD = 1000
 AVG_CLIPS_THRESHOLD = 5
-# Set a new, larger field size limit for the CSV reader to handle long fields.
 CSV_FIELD_SIZE_LIMIT = 10000000
 
 # --- Configure Logging ---
@@ -40,8 +58,10 @@ def read_tsv(file_path: Path) -> List[Dict[str, str]]:
         with open(file_path, "r", encoding="utf-8") as f:
             return list(csv.DictReader(f, delimiter="\t"))
     except FileNotFoundError:
-        logger.error(f"Fatal: The file {file_path} was not found.")
-        sys.exit(1)
+        logger.warning(
+            f"Optional file not found: {file_path}. Proceeding without it."
+        )
+        return []
     except Exception as e:
         logger.error(
             f"Fatal: An error occurred while reading {file_path}: {e}"
@@ -112,7 +132,6 @@ def get_text_corpus_stats(
     all_text = [
         row["sentence"] for row in validated_clips if "sentence" in row
     ]
-
     total_tokens = sum(len(s.split()) for s in all_text)
     total_chars = sum(len(s) for s in all_text)
 
@@ -147,32 +166,57 @@ def get_text_corpus_stats(
 
 
 def generate_prompt_for_llm(
-    stats: Dict[str, Any], sentence_threshold: int, avg_clips_threshold: float
+    stats: Dict[str, Any],
+    sentence_threshold: int,
+    avg_clips_threshold: float,
+    existing_markdown: Optional[str] = None,
 ) -> str:
     """
-    Constructs a highly specific, multi-part prompt to guide the Gemini LLM.
+    Constructs a highly specific prompt to guide the Gemini LLM for datasheet
+    creation or update.
     """
     logger.info("Generating detailed prompt for the language model...")
     prompt_stats = json.loads(json.dumps(stats, default=lambda o: dict(o)))
     lang_name = stats["language"]["name"]
 
-    return f"""
-You are an expert AI assistant that creates datasheets for Mozilla Common Voice datasets.
-Your task is to generate a comprehensive and accurate markdown file based on the statistical data provided below. Follow all instructions with extreme precision.
+    if existing_markdown:
+        update_instructions = f"""
+You are an expert AI assistant that updates datasheets for Mozilla Common Voice.
+Your task is to **UPDATE** the provided markdown file with new statistics. You must intelligently merge the new data while preserving manually-written sections.
 
-**STATISTICAL DATA:**
+**Core Task:**
+Replace the old, auto-generated statistical sections in the "EXISTING MARKDOWN" with fresh data from the "NEW STATISTICAL DATA" section.
+- **Preserve Manual Content:** Sections like 'History', 'Acknowledgements', or detailed, human-written introductions should be kept exactly as they are.
+- **Replace Statistical Content:** Sections that are clearly generated from data (like 'Clip & Sentence Statistics', 'Demographic Information', 'Text Corpus', 'Contributor Statistics', etc.) must be completely replaced with newly generated content based on the new data.
+- **Follow all formatting and content instructions below** when generating the new sections.
+
+**EXISTING MARKDOWN:**
+---
+{existing_markdown}
+---
+"""
+    else:
+        update_instructions = """
+You are an expert AI assistant that creates datasheets for Mozilla Common Voice datasets.
+Your task is to generate a comprehensive and accurate markdown file from scratch based on the statistical data provided below. Follow all instructions with extreme precision.
+"""
+
+    return f"""
+{update_instructions}
+
+**NEW STATISTICAL DATA:**
 {json.dumps(prompt_stats, indent=2, ensure_ascii=False)}
 
-**INSTRUCTIONS:**
+**DETAILED INSTRUCTIONS (Apply to new and updated sections):**
 
 **1. Main Title:**
-Start with the title: `# Mozilla Common Voice: {lang_name} ({stats['language']['code']})`
+Ensure the title is: `# Mozilla Common Voice: {lang_name} ({stats['language']['code']})`
 
 **2. Language Section:**
-Write a brief, encyclopedic introduction for the `{lang_name}` language. Include its language family, primary regions where it's spoken, and number of speakers.
+If updating, preserve any existing detailed introduction. If creating from scratch, write a brief, encyclopedic introduction for the `{lang_name}` language, including its language family, regions, and speaker count.
 
 **3. Clip & Sentence Statistics Section:**
-Create a section titled `## Clip & Sentence Statistics`. In this section, state that the dataset contains a total of **{stats['clip_stats']['validated_hours']} validated hours** of speech from **{sum(stats['contributor_stats'].values())}** unique contributors. Then, create two markdown tables EXACTLY as follows, using the data provided:
+Generate a section titled `## Clip & Sentence Statistics`. State that the dataset contains **{stats['clip_stats']['validated_hours']} validated hours** of speech from **{sum(stats['contributor_stats'].values())}** unique contributors. Then, create two markdown tables EXACTLY as follows:
 
 First table (Clip Summary):
 | Type                | Count | Hours  |
@@ -189,48 +233,37 @@ Second table (Sentence Summary):
 | **Total Sentences**   |     {stats['sentence_stats']['total_count']:,} |
 
 **4. Demographic Information Section:**
-Create a section `## Demographic Information`. Include the sentence: "Demographic information is self-reported by contributors and may not be representative of the entire speaker population."
-- Create subsections for `### Age` and `### Gender` with their respective tables.
-- Create a subsection `### Accent`. Inside this subsection, do the following:
-  - First, create a table of the raw, user-reported accents and their counts from the `demographics.accent` data.
-  - Second, immediately after that table, create a new table titled `#### English Translation of Accents`. This table should have two columns: 'Reported Accent' and 'Best-Effort English Translation/Explanation'. Provide a best-effort translation for each unique accent string. For city names (e.g., 'Almaty'), the translation is the name itself. For descriptive phrases (e.g., 'Оңтүстік'), provide the English meaning (e.g., 'Southern').
+Generate a section `## Demographic Information`. Include the sentence: "Demographic information is self-reported by contributors and may not be representative of the entire speaker population."
+- Create subsections `### Age` and `### Gender` with tables.
+- Create `### Accent` with two tables: the first for raw data, the second titled `#### English Translation of Accents` providing best-effort translations/explanations.
 
 **5. Contributor Statistics Section:**
-Create a section `## Contributor Statistics`. Include a table showing the distribution of clips recorded per contributor from `contributor_stats`.
+Generate a section `## Contributor Statistics` with a table showing the distribution of clips per contributor.
 
 **6. Text Corpus Section:**
-Create a section `## Text Corpus`. Under this section, add the following bullet points using the data from `text_corpus`:
+Generate `## Text Corpus`. Add these bullet points:
 - **Total validated sentences:** {stats['sentence_stats']['validated_count']:,}
 - **Sentences without a recording yet:** {stats['text_corpus']['sentences_without_recording']:,}
 - **Average clips per validated sentence:** {stats['text_corpus']['average_clips_per_sentence']:.2f}
 - **Average sentence length (tokens):** {stats['text_corpus']['average_sentence_length_tokens']:.1f}
 - **Average sentence length (characters):** {stats['text_corpus']['average_sentence_length_chars']:.1f}
+Then create subsections for `### Corpus Sources`, `### Alphabet`, and `### Sample Sentences`.
 
-**7. Corpus Sources Subsection:**
-Create a subsection `### Corpus Sources`. Analyze the `unique_sources` list. If a source is in a foreign language (e.g., 'мақал-мәтелдер'), identify the language and explain its meaning. If it's a URL or generic name ('sentence-collector'), explain it. Present this as a markdown table with 'Source' and 'Description' columns.
+**7. Community Links Section & Conditional Call to Action:**
+Generate `## Community Links`.
+- Add a link to the main page: `https://commonvoice.mozilla.org/{stats['language']['code']}`.
+- **Conditional Analysis:** If `sentences_without_recording` is less than {sentence_threshold} OR `average_clips_per_sentence` is greater than {avg_clips_threshold}, add a prominent note stating this language is in **dire need of new sentences** to provide variety for voice contributors.
 
-**8. Alphabet Subsection:**
-Create a subsection `### Alphabet`. Use a markdown code block to display the characters from the `alphabet` list.
+**8. Fun Fact Section:**
+Generate `## Fun Fact`. Provide one interesting, non-offensive fun fact about the `{lang_name}` language, and cite the source.
 
-**9. Sample Sentences Subsection:**
-Create a subsection `### Sample Sentences`. List the 5 sentences from `sample_sentences`.
+**9. Final Sections:**
+- Generate `## Datasheet Authors` credited to 'This datasheet was generated automatically...'. Preserve any existing human authors if updating.
+- **Modern Call to Action:** After everything else, add a final, encouraging call to action. Invite readers to help grow the dataset for `{lang_name}` by contributing in four key ways: **Speaking** new clips, **Listening** to and verifying others' recordings, **Writing** new public domain sentences, and **Reviewing** sentences submitted by the community, all on the main Common Voice website.
 
-**10. Community Links Section & Conditional Call to Action:**
-Create a section `## Community Links`.
-- Add a link to the Common Voice Page: `https://commonvoice.mozilla.org/{stats['language']['code']}`
-- Add a link to the Sentence Collector: `https://commonvoice.mozilla.org/sentence-collector/#/{stats['language']['code']}/main`
-- **Conditional Analysis:** If 'sentences_without_recording' is less than {sentence_threshold} OR 'average_clips_per_sentence' is greater than {avg_clips_threshold}, add a prominent note stating that this language is in **dire need of new sentences** to provide variety for voice contributors.
-
-**11. Fun Fact Section:**
-Create a new section `## Fun Fact`. In this section, provide one interesting, non-offensive, and culturally-sensitive fun fact about the `{lang_name}` language. The fact should be a short paragraph. You MUST cite the source for the fact (e.g., a URL to a reputable source like Wikipedia, a university website, or a linguistic database).
-
-**12. Final Sections:**
-- Create `## Datasheet Authors` and credit it with: 'This datasheet was generated automatically based on corpus statistics.'
-- After everything else, add a final, encouraging call to action. Invite readers to help grow the dataset for `{lang_name}` by contributing their voice at the main site or by adding public domain sentences via the Sentence Collector tool.
-
-**13. Formatting Rules (Strictly follow):**
-- Maximum line width for all text is 79 characters. Use text wrapping for paragraphs.
-- Use '$$$' as a delimiter for code blocks, NOT '```'.
+**10. Formatting Rules (Strictly follow):**
+- Maximum line width is 79 characters. Wrap paragraphs.
+- Use '$$$' for code blocks, NOT '```'.
 - Right-align numbers in tables where appropriate.
 """
 
@@ -246,14 +279,12 @@ def call_gemini_api(prompt: str) -> str:
     logger.info("Instantiating the GenAI Client...")
     try:
         client = genai.Client()
-
         logger.info(
             "Sending request to the Gemini API. This may take a moment..."
         )
         response = client.models.generate_content(
             model="models/gemini-2.5-pro", contents=prompt
         )
-
         logger.info("Successfully received response from the API.")
         return response.text
     except Exception as e:
@@ -276,17 +307,19 @@ def main():
         2. Set your Gemini API key as an environment variable:
            export GEMINI_API_KEY="YOUR_API_KEY_HERE"
         3. Run the script from the command line:
-           python generate_datasheet.py --base_path /path/to/language_dir
+           - To create a new file:
+             python generate_datasheet.py --base_path /path/to/language_dir
+           - To update an existing file:
+             python generate_datasheet.py --base_path /path/to/lang_dir --update_file existing_datasheet.md
     """
     logging.basicConfig(
         level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
     )
-
     logger.info(f"Setting CSV field size limit to {CSV_FIELD_SIZE_LIMIT}")
     csv.field_size_limit(CSV_FIELD_SIZE_LIMIT)
 
     parser = argparse.ArgumentParser(
-        description="Generate a datasheet for a Mozilla Common Voice dataset using the Google GenAI SDK."
+        description="Generate or update a datasheet for a Mozilla Common Voice dataset."
     )
     parser.add_argument(
         "--base_path",
@@ -294,7 +327,26 @@ def main():
         required=True,
         help="Path to the language directory (e.g., ./cv-corpus-vX/kk)",
     )
+    parser.add_argument(
+        "--update_file",
+        type=Path,
+        help="Optional path to an existing markdown datasheet to update.",
+    )
     args = parser.parse_args()
+
+    existing_markdown_content = None
+    if args.update_file:
+        if args.update_file.exists():
+            logger.info(
+                f"Found existing datasheet to update: {args.update_file}"
+            )
+            existing_markdown_content = args.update_file.read_text(
+                encoding="utf-8"
+            )
+        else:
+            logger.warning(
+                f"File to update not found: {args.update_file}. Will create a new file instead."
+            )
 
     base_path = args.base_path
     if not base_path.is_dir():
@@ -321,19 +373,17 @@ def main():
         f"Starting datasheet generation for language: {lang_name} ({lang_code})"
     )
 
-    # --- Load all necessary data files ---
     validated_clips = read_tsv(base_path / "validated.tsv")
     invalidated_clips = read_tsv(base_path / "invalidated.tsv")
     all_clips_durations = read_tsv(base_path / "clip_durations.tsv")
     validated_sentences = read_tsv(base_path / "validated_sentences.tsv")
-    invalidated_sentences_data = read_tsv(
+    unvalidated_sentences_data = read_tsv(
         base_path / "unvalidated_sentences.tsv"
     )
     durations_map = {
         row["clip"]: int(row["duration[ms]"]) for row in all_clips_durations
     }
 
-    # --- Aggregate all stats with the new structure ---
     validated_hours = round(get_hours(validated_clips, durations_map), 2)
     invalidated_hours = round(get_hours(invalidated_clips, durations_map), 2)
 
@@ -349,9 +399,9 @@ def main():
         },
         "sentence_stats": {
             "validated_count": len(validated_sentences),
-            "invalidated_count": len(invalidated_sentences_data),
+            "invalidated_count": len(unvalidated_sentences_data),
             "total_count": len(validated_sentences)
-            + len(invalidated_sentences_data),
+            + len(unvalidated_sentences_data),
         },
         "demographics": get_demographics(validated_clips),
         "contributor_stats": get_contributor_stats(validated_clips),
@@ -361,7 +411,10 @@ def main():
     }
 
     prompt = generate_prompt_for_llm(
-        stats, SENTENCE_THRESHOLD, AVG_CLIPS_THRESHOLD
+        stats,
+        SENTENCE_THRESHOLD,
+        AVG_CLIPS_THRESHOLD,
+        existing_markdown_content,
     )
     final_markdown = call_gemini_api(prompt)
 
