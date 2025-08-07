@@ -122,8 +122,8 @@ The text for this dataset comes from the following sources:
   
   By article 8 of Kazakhstani copyright law, works of folklore are exempt from
   copyright and are thus in the public domain. We thank Assel Baltabayeva for
-  her help with reviewing these proverbs, as well as with translating the web
-  interface of Common voice into Kazakh.
+  her help with reviewing these proverbs to eliminate PDF conversion errors,
+  as well as with translating the web interface of Common voice into Kazakh.
 
 * Individual sentences submitted by users through the Mozilla Common Voice
   interface (public domain)
