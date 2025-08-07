@@ -1,7 +1,7 @@
-# Mozilla Common Voice: BA (ba)
+# Mozilla Common Voice: Bashkir (ba)
 
-This datasheet is for the Mozilla Common Voice (MCV) dataset for BA (Bashkir),
-version `22.0-2025-06-25`.
+This datasheet is for the Mozilla Common Voice (MCV) dataset for the Bashkir
+language, version `22.0-2025-06-25`.
 
 ## Language
 
