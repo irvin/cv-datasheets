@@ -1,16 +1,5 @@
 # *Basaa* &mdash; Basaa (`bas`)
 
-## Text corpus
-
-## Discussion
-
-
-# Datasheet authors
-
-* TBD <...@gmail.com>
-
-# *Basaa*  (`bas`)
-
 ## Language
 
 Basaa is a language spoken in Cameroon by a population of around 500k speakers. While the vitality of Basaa is considered to be stable by [ethnologue](https://www.ethnologue.com/language/bas/) intergenerational transmission is not systematically achieved, mostly in urban areas.
@@ -33,3 +22,43 @@ There are currently no pre-defined accents.
 #### User defined
 
 There are currently no user-defined accents.
+
+## Demographic Information
+
+### Gender
+Self-declared gender information, frequency refers to the number of clips annotated with this gender.
+
+| Gender | Frequency |
+|--------|-----------|
+| male, masculine | 1 |
+| undeclared | 50 |
+| female, feminine | 2 |
+
+### Age
+
+Self-declared age information, frequency refers to the number of clips annotated with this age band.
+
+| Age band | Percentage |
+|----------|-----------|
+| 40-49 | 61% |
+| No information | 39% |
+
+
+### Clips per contributor
+
+The following table shows the statistics of recordings and validations. The first column indicates the size of the corpus. The second column indicates the number of recorded hours. The third  column shows the number of validated hours. The fourth column represents the number of contributors.
+
+| Size (MB)| Hours of Recording | Validated Hours | Number of Contributors|
+|-----|--------------------|------------------|-----------------------|
+|241,71 | 14 | 13 | 43 |
+
+
+## Text corpus
+
+## Discussion
+
+
+# Datasheet authors
+
+* Emmanuel Ngué Um<ngueum@gmail.com>
+
