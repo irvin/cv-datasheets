@@ -1,5 +1,8 @@
 # *Norsk Nynorsk* &mdash; Norwegian Nynorsk (`nn-NO`)
 
+This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
+for Norwegian Nynorsk (`nn-NO`).
+
 ## Language
 
 Norwegian Nynorsk is a written standard of Norwegian. The standard is the preferred written 
