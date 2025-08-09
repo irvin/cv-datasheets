@@ -1,6 +1,18 @@
-# *Norsk Nynorsk* &mdash; Norwegian Nynorsk (`nn-NO`)
+==NATIVE_NAME==
 
-## Language
+Norsk Nynorsk
+
+==ENGLISH_NAME==
+
+Norwegian Nynorsk
+
+==LOCALE==
+
+nn-NO
+
+==DATASET_DESCRIPTION==
+
+==LANGUAGE_DESCRIPTION==
 
 Norwegian Nynorsk is a written standard of Norwegian. The standard is the preferred written 
 standard of around 10-15% of the Norwegian population and is largely based on the Norwegian dialects
@@ -10,17 +22,22 @@ The language code is `nn` and the locale is `nn-NO` (Nynorsk as written in Norwa
 locale includes the region code for historical reasons relating to the localisation platform. The dataset
 contains Norwegian as spoken anywhere and as written in the Nynorsk standard.
 
-### Variants 
+==VARIANT_DESCRIPTION==
 
 There are currently no variants defined for Norwegian Nynorsk.
 
-### Accents
+==ACCENT_DESCRIPTION==
 
-#### Predefined
+==PREDEFINED_ACCENT_DESCRIPTION==
 
 There are currently no pre-defined accents.
 
-#### User defined
+==USER_DEFINED_ACCENT_DESCRIPTION==
+
+The following accents have been defined by contributors. The frequency refers to how many 
+clips are annotated with this accent.
+
+==USER_DEFINED_ACCENT_TABLE==
 
 | Accent                                        | Frequency |
 |-----------------------------------------------|-----------|
@@ -36,11 +53,7 @@ There are currently no pre-defined accents.
 | Ungarsk Norsk | 7 |
 | Bergen | 3 |
 
-## Demographic information
-
-### Gender
-
-Self-declared gender information, frequency refers to the number of clips annotated with this gender.
+==GENDER_TABLE==
 
 | Gender | Frequency |
 |--------|-----------|
@@ -48,9 +61,8 @@ Self-declared gender information, frequency refers to the number of clips annota
 | undeclared | 331 |
 | female, feminine | 165 |
 
-### Age
 
-Self-declared age information, frequency refers to the number of clips annotated with this age band.
+==AGE_TABLE==
 
 | Age band | Frequency |
 |----------|-----------|
@@ -61,11 +73,7 @@ Self-declared age information, frequency refers to the number of clips annotated
 | teens | 24 |
 | fifties | 2 |
 
-### Clips per contributor
-
-The following table shows the statistics of the number of clips recorded per contributor. The first column
-indicates the range, e.g. 0-10 between 1 and 10 clips recorded. The second column is the number of contributors
-who have recorded that number of clips.
+==CLIPS_TABLE==
 
 | Number of clips recorded | Number of contributors |
 |-----|---------|
@@ -76,15 +84,15 @@ who have recorded that number of clips.
 |500-1000|0|
 |> 1000|0|
 
-## Text corpus
+==TEXT_CORPUS_DESCRIPTION==
 
 The average length of sentences is 7 tokens (42 characters).
 
-### Writing system
+==WRITING_SYSTEM_DESCRIPTION==
 
 Norwegian is written in the Latin script. The text corpus also contains a limited amount of punctuation.
 
-#### Symbol table
+==ALPHABET_TABLE==
 
 |Symbol|
 |---|
@@ -123,11 +131,9 @@ Norwegian is written in the Latin script. The text corpus also contains a limite
 | ! | 
 | - | 
 | . | 
-| ? |
+| ? | 
 
-### Sample
-
-There follows a randomly selected sample of five sentences from the corpus.
+==SENTENCES_SAMPLE==
 
 ```
 Dette med følg boka skjønte eg heller ikkje heilt vitsen med.
@@ -137,13 +143,13 @@ Kva er forklaringa på at regjeringa enno ikkje har følgt dette opp?
 Eg gler meg også til å lesa.
 ```
 
-### Sources
+==SOURCES_LIST==
 
 * [Korpus med bokomtalar frå Bokelskere.no](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-53/) (Public domain)
 * [Stortingskorpuset 1.1](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-58/) (Public domain)
 * Individual sentences submitted by users through the Mozilla Common Voice interface (Public domain)
 
-### Text domains
+==TEXT_DOMAIN_DESCRIPTION==
 
 The corpus was initially seeded with sentences from
 * Book reviews and book discussions (from the web community bokelskere.no)
@@ -152,7 +158,7 @@ The corpus was initially seeded with sentences from
 Later, several individual users have contributed sentences in various
 domains through Mozilla's web interface.
 
-### Processing
+==PROCESSING_DESCRIPTION==
 
 Both sources include sentences in both Norwegian Nynorsk and Norwegian Bokmål.
 
@@ -167,33 +173,23 @@ Nynorsk-only words:
 These candidate sentences were then checked by two writers of Nynorsk to ensure that they were indeed written
 in Nynorsk before inclusion into the corpus.
 
-### Recommended post-processing
-
-## Get involved!
-
-### Community links
+==COMMUNITY_LINKS_LIST==
 
 * [Common Voice translators on Pontoon](https://pontoon.mozilla.org/nn-NO/common-voice/contributors/)
 
-### Discussions
+==DISCUSSION_LINKS_LIST==
 
 * [Merging Norwegian Nynorsk and Norwegian Bokmål](https://discourse.mozilla.org/t/merging-norwegian-nynorsk-and-norwegian-bokmal/130474) (2024)
 * [Norwegian speech and its dialect and sentence problem](https://discourse.mozilla.org/t/norwegian-speech-and-its-dialect-and-sentence-problems/30568) (2018)
 
-### Contribute
+==CONTRIBUTE_LINKS_LIST==
 
 * [Contribute voice recordings](https://commonvoice.mozilla.org/nn-NO/speak)
 * [Contribute sentences](https://commonvoice.mozilla.org/nn-NO/write)
 * [Validate recordings](https://commonvoice.mozilla.org/nn-NO/listen)
 * [Review sentences](https://commonvoice.mozilla.org/nn-NO/review)
 
-## Acknowledgements
-
-### Datasheet authors
+==DATASHEET_AUTHORS_LIST==
 
 * Francis M. Tyers <ftyers@iu.edu>
 * Kevin B. Unhammer <unhammer@fsfe.org>
-
-### Citation guidelines
-
-
