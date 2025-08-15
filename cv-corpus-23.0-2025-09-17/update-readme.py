@@ -9,8 +9,9 @@ draft_codes.sort()
 final_codes.sort()
 
 print('# Datasheets')
-
+print()
 print('## Status')
+print()
 
 total_count = 0
 final_count = 0
