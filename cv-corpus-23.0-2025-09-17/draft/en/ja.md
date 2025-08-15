@@ -29,6 +29,8 @@ for Japanese (`ja`).
 
 ## Demographic information
 
+The dataset includes the following distribution of age and gender.
+
 ### Gender
 
 Self-declared gender information, frequency refers to the number of clips annotated with this gender.
@@ -107,4 +109,8 @@ There follows a randomly selected sample of five sentences from the corpus.
 ### Citation guidelines
 
 <!-- {{CITATION_DESCRIPTION}} -->
+
+### Funding
+
+<!-- {{FUNDING_DESCRIPTION}} -->
 

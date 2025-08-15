@@ -109,3 +109,7 @@ There follows a randomly selected sample of five sentences from the corpus.
 ### Citation guidelines
 
 <!-- {{CITATION_DESCRIPTION}} -->
+
+### Funding
+
+<!-- {{FUNDING_DESCRIPTION}} -->
