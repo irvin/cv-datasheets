@@ -1,4 +1,4 @@
-*پښتو* &mdash; Pashto (`ps`)
+# *پښتو* &mdash; Pashto (`ps`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Pashto (`ps`).

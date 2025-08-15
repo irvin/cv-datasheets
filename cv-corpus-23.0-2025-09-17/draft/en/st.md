@@ -1,4 +1,4 @@
-*Sesotho sa Borwa* &mdash; Southern Sotho (`st`)
+# *Sesotho sa Borwa* &mdash; Southern Sotho (`st`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Southern Sotho (`st`).

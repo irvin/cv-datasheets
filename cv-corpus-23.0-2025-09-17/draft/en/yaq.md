@@ -1,4 +1,4 @@
-*<Yaqui>* &mdash; Yaqui (`yaq`)
+# *<Yaqui>* &mdash; Yaqui (`yaq`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Yaqui (`yaq`).

@@ -1,4 +1,4 @@
-*Norsk (nynorsk)* &mdash; Norwegian Nynorsk (`nn-NO`)
+# *Norsk (nynorsk)* &mdash; Norwegian Nynorsk (`nn-NO`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Norwegian Nynorsk (`nn-NO`).

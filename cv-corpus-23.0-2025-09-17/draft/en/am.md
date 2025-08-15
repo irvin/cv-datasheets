@@ -1,4 +1,4 @@
-*አማርኛ* &mdash; Amharic (`am`)
+# *አማርኛ* &mdash; Amharic (`am`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Amharic (`am`).

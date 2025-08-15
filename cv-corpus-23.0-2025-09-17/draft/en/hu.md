@@ -1,4 +1,4 @@
-*Magyar* &mdash; Hungarian (`hu`)
+# *Magyar* &mdash; Hungarian (`hu`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Hungarian (`hu`).

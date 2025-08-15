@@ -1,4 +1,4 @@
-*گاؤری* &mdash; Gawri (`gwc`)
+# *گاؤری* &mdash; Gawri (`gwc`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Gawri (`gwc`).

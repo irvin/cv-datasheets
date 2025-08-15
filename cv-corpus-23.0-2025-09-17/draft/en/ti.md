@@ -1,4 +1,4 @@
-*ትግርኛ* &mdash; Tigrinya (`ti`)
+# *ትግርኛ* &mdash; Tigrinya (`ti`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Tigrinya (`ti`).
