@@ -4,7 +4,7 @@ This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Spe
 
 ## Language
 
-Basaa is a language spoken in Cameroon by a population of around 500k speakers. While the vitality of Basaa is considered to be stable by [ethnologue](https://www.ethnologue.com/language/bas/) intergenerational transmission is not systematically achieved, mostly in urban areas.
+Basaa is a language spoken in Cameroon by a population of around 500k speakers. While the vitality of Basaa is considered to be stable by [Ethnologue](https://www.ethnologue.com/language/bas/) intergenerational transmission is not systematically achieved, mostly in urban areas.
 
 #### User defined
 
