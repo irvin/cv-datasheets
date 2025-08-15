@@ -19,6 +19,9 @@ There are currently no variants defined for Norwegian Nynorsk.
 
 ### Accents
 
+Predefined accents are selected from a drop-down box, whereas user-defined 
+accents are free form and as defined by the user.
+
 #### Predefined
 
 There are currently no pre-defined accents.
@@ -40,6 +43,8 @@ There are currently no pre-defined accents.
 | Bergen | 3 |
 
 ## Demographic information
+
+The dataset includes the following distribution of age and gender.
 
 ### Gender
 
@@ -173,6 +178,9 @@ in Nynorsk before inclusion into the corpus.
 ### Recommended post-processing
 
 ## Get involved!
+
+To get more information about this dataset and find out how you can contribute, please 
+take a look at the following links.
 
 ### Community links
 
