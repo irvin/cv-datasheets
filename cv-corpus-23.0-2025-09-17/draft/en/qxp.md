@@ -1,7 +1,7 @@
-*{{NATIVE_NAME}}* &mdash; {{ENGLISH_NAME}} (`{{LOCALE}}`)
+*<Puno Quechua>* &mdash; Puno Quechua (`qxp`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
-for {{ENGLISH_NAME}} (`{{LOCALE}}`).
+for Puno Quechua (`qxp`).
 
 ## Language
 
@@ -107,3 +107,4 @@ There follows a randomly selected sample of five sentences from the corpus.
 ### Citation guidelines
 
 <!-- {{CITATION_DESCRIPTION}} -->
+

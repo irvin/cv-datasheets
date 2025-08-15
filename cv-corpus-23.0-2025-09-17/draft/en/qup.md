@@ -1,7 +1,7 @@
-*{{NATIVE_NAME}}* &mdash; {{ENGLISH_NAME}} (`{{LOCALE}}`)
+*<Southern Pastaza Quechua>* &mdash; Southern Pastaza Quechua (`qup`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
-for {{ENGLISH_NAME}} (`{{LOCALE}}`).
+for Southern Pastaza Quechua (`qup`).
 
 ## Language
 
@@ -107,3 +107,4 @@ There follows a randomly selected sample of five sentences from the corpus.
 ### Citation guidelines
 
 <!-- {{CITATION_DESCRIPTION}} -->
+
