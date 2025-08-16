@@ -10,6 +10,16 @@ co-official status with Russian. There are approximately 1.2 million native
 speakers. The language is also spoken in neighbouring regions, including
 Chelyabinsk, Orenburg, and Sverdlovsk Oblasts. 
 
+### Variants
+
+There are currently no variants defined for Bashkir.
+
+### Accents
+
+#### Predefined
+
+There are currently no pre-defined accents.
+
 ## Text corpus
 
 ### Writing system
