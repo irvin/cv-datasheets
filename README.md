@@ -6,7 +6,7 @@
 * The draft datasheets are then given to community members to edit and adapt
 * The editted datasheets that we receive back are added to the repository in the final/ directory 
 
-## Scripts
+## Scripts
 
 **Usage:**
 
