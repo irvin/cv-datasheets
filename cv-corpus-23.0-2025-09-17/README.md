@@ -302,3 +302,5 @@ Each directory contains subdirectories corresponding to the languages of the dat
 | `zoc` | - |
 | `zu` | - |
 | `zza` | - |
+
+Note: This table can be updated using the supplied `update-readme.py` script.
