@@ -1,95 +1,34 @@
-# Mozilla Common Voice: Bashkir (ba)
+# *Башҡорт* &mdash; Bashkir (`ba`)
 
-This datasheet is for the Mozilla Common Voice (MCV) dataset for the Bashkir
-language, version `22.0-2025-06-25`.
+This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset for Bashkir (`ba`).
 
 ## Language
 
-Bashkir is a Turkic language belonging to the Kipchak branch. It is spoken
+Bashkir is a Turkic language belonging to the Kypchak branch. It is spoken
 primarily in the Republic of Bashkortostan in Russia, where it holds
 co-official status with Russian. There are approximately 1.2 million native
-speakers. The language is also spoken in neighboring regions, including
-Chelyabinsk, Orenburg, and Sverdlovsk Oblasts. The modern Bashkir alphabet
-is based on Cyrillic and includes several additional letters to represent
-unique sounds.
+speakers. The language is also spoken in neighbouring regions, including
+Chelyabinsk, Orenburg, and Sverdlovsk Oblasts. 
 
-## Clip & Sentence Statistics
+## Text corpus
 
-This dataset contains **239.56 validated hours** of speech from **836** unique contributors.
+### Writing system
 
-| Type                | Count | Hours  |
-| ------------------- | ----: | -----: |
-| Validated Clips     | 196,837 |   239.56 |
-| Invalidated Clips   | 8,007 |   10.87 |
-| **Total Clips**     | 218,456 |   250.43 |
+The modern Bashkir alphabet is based on Cyrillic.
 
-| Type                  |   Count |
-| --------------------- | ------: |
-| Validated Sentences   |   153,968 |
-| Invalidated Sentences |     5 |
-| **Total Sentences**   |     153,973 |
+### Sample
 
-## Demographic Information
+There follows a randomly selected sample of five sentences from the corpus.
 
-Demographic information is self-reported by contributors and may not be
-representative of the entire speaker population.
+```
+Киреһенсә, күгәрсендәр һәр саҡ заман менән бергә атларға тырыша һәм яңынан-яңы технологиялар ҡуллана.
+Ул, башын түбән баҫып, уйланып атлап, яйлап ҡына мәке янына барып етте.
+Өҙлөкһәң — төҙәлеүе ауырыраҡ була ул. Ҡайнағанан хат алаһыңмы?
+Ул бик ҡаты тәртип боҙҙо.
+Гәрәй Шәйхетдинович кеүек ғәҙел етәкселәр өсөн!..
+```
 
-### Gender
-
-| Gender              | Validated Clips |
-| ------------------- | --------------: |
-| Female / Feminine   |          76,257 |
-| Male / Masculine    |          62,613 |
-
-### Age
-
-| Age Group | Validated Clips |
-| --------- | --------------: |
-| Sixties   |          36,472 |
-| Thirties  |          36,329 |
-| Twenties  |          35,241 |
-| Forties   |          12,001 |
-| Fifties   |          10,958 |
-| Teens     |           7,773 |
-| Seventies |              39 |
-
-### Accent
-
-| Accent                                       | Validated Clips |
-| -------------------------------------------- | --------------: |
-| Юго-Восточный диалект, Абзелиловский         |              54 |
-| Кәмәлек буйындағы һөйләше                     |               5 |
-| male properly pronouncing as in official bashkort |               4 |
-| без акцента                                  |               3 |
-
-#### English Translation of Accents
-
-| Accent (Original)                            | Translation / Explanation           |
-| -------------------------------------------- | ----------------------------------- |
-| Юго-Восточный диалект, Абзелиловский         | South-Eastern dialect, Abzelilovsky |
-| Кәмәлек буйындағы һөйләше                     | Dialect of the Kemeley area         |
-| male properly pronouncing as in official bashkort | (Self-explanatory)                  |
-| без акцента                                  | Without accent (Russian)            |
-
-## Contributor Statistics
-
-| Clips Recorded | Number of Contributors |
-| -------------- | ---------------------: |
-| 1-10           |                    374 |
-| 11-50          |                    221 |
-| >500           |                    126 |
-| 101-500        |                     68 |
-| 51-100         |                     47 |
-
-## Text Corpus
-
-*   **Total validated sentences:** 153,968
-*   **Sentences without a recording yet:** 7
-*   **Average clips per validated sentence:** 1.50
-*   **Average sentence length (tokens):** 7.1
-*   **Average sentence length (characters):** 61.3
-
-### Corpus Sources
+### Sources
 
 *   Minecraft
 *   Minecraft Java Edition башҡорт тәржемәһенән.
@@ -98,51 +37,24 @@ representative of the entire speaker population.
 *   Лия Гераскина. Әсәйемә зәңгәр сәскәләр. Йәншишмә. - 2016. - № 32-36
 *   Самоцитирование
 
-### Alphabet
+## Get involved!
 
-```
- ! " , - . 0 1 2 3 4 5 6 7 8 9 : ; ? I _ a b c d e f h i j l m n o p
- r s t u v w x « » ̆ А Б В Г Д Е Ж З И Й К Л М Н О П Р С Т У Ф Х Ц
- Ч Ш Щ Ъ Ы Ь Э Ю Я а б в г д е ж з и й к л м н о п р с т у ф х ц ч
- ш щ ъ ы ь э ю я ё Ғ ғ Ҙ ҙ Ҡ ҡ Ң ң Ҫ ҫ Ү ү Һ һ Ә ә Ө ө – —
-```
+### Community links
 
-### Sample Sentences
+* [Bashkort voice chat](https://t.me/bashkort_voice)
+* [Turkic LR++ for Common Voice](https://t.me/+4Rlr3cfhhig1NWM8)
+* [Turkic Interlingua](https://t.me/joinchat/WRFz62nYdmJ1uo1L)
 
-*   Киреһенсә, күгәрсендәр һәр саҡ заман менән бергә атларға тырыша һәм
-    яңынан-яңы технологиялар ҡуллана.
-*   Ул, башын түбән баҫып, уйланып атлап, яйлап ҡына мәке янына барып
-    етте.
-*   Өҙлөкһәң — төҙәлеүе ауырыраҡ була ул. Ҡайнағанан хат алаһыңмы?
-*   Ул бик ҡаты тәртип боҙҙо.
-*   Гәрәй Шәйхетдинович кеүек ғәҙел етәкселәр өсөн!..
+### Contribute
 
-## Community Links
+* [Contribute voice recordings](https://commonvoice.mozilla.org/ba/speak)
+* [Contribute sentences](https://commonvoice.mozilla.org/ba/write)
+* [Validate recordings](https://commonvoice.mozilla.org/ba/listen)
+* [Review sentences](https://commonvoice.mozilla.org/ba/review)
 
-*   **Main Page:** [https://commonvoice.mozilla.org/ba](https://commonvoice.mozilla.org/ba)
+## Acknowledgements
 
-## Fun Fact
+### Datasheet authors
 
-The modern Bashkir alphabet is based on Cyrillic but includes nine
-additional letters to represent specific Bashkir sounds not found in
-Russian: Әә, Өө, Үү, Ғғ, Ҙҙ, Ҡҡ, Ңң, Ҫҫ, and Һһ.
+* Ilnar Salimzianov <mdc.ilnar@gmail.com>
 
-*Source: [Wikipedia](https://en.wikipedia.org/wiki/Bashkir_alphabets)*
-
-## Datasheet Authors
-
-This datasheet was semi-automatically generated by Ilnar Salimzianov <mdc.ilnar@gmail.com> based on corpus statistics.
-
----
-
-## Help Grow This Dataset!
-
-You can help make the Common Voice dataset for Bashkir even bigger. Your
-contributions are vital for building open-source voice technology for everyone.
-
-*   **Speak:** Record new voice clips from the available sentences.
-*   **Listen:** Validate recordings submitted by other contributors.
-*   **Write:** Add new public domain sentences to the text corpus.
-*   **Review:** Check sentences submitted by the community for quality.
-
-Get started today at [commonvoice.mozilla.org/ba](https://commonvoice.mozilla.org/ba).
