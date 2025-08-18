@@ -13,6 +13,6 @@
 Generate the draft datasheets:
  
 ```
-python3 generate-datasheet.py metadata/metadata.json template.md cv-corpus-23.0-2025-09-17/draft/en 
+python3 generate-datasheet.py metadata/metadata.json templates/en.md cv-corpus-23.0-2025-09-17/draft/en 
 ```
 
