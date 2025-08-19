@@ -30,7 +30,7 @@ for Iñupiaq (`ipk`).
 <!-- {{USER_DEFINED_ACCENT_TABLE}} -->
 
 ## Demographic information
-
+<!-- You can get a lot of the information in this section from https://analyzer.cv-toolbox.web.tr/browse -->
 The dataset includes the following distribution of age and gender.
 
 ### Gender
@@ -38,25 +38,33 @@ The dataset includes the following distribution of age and gender.
 Self-declared gender information, frequency refers to the number of clips annotated with this gender.
 
 <!-- {{GENDER_TABLE}} -->
-
+<!-- 
+| Gender | Frequency |
+|--------|-----------|
+| male, masculine | ? |
+| undeclared | ? |
+| female, feminine | ? |
+-->
 ### Age
 
 Self-declared age information, frequency refers to the number of clips annotated with this age band.
 
 <!-- {{AGE_TABLE}} -->
-
-### Clips per contributor
-
-The following table shows the statistics of the number of clips recorded per contributor. The first column
-indicates the range, e.g. 0-10 between 1 and 10 clips recorded. The second column is the number of contributors
-who have recorded that number of clips.
-
-<!-- {{CLIPS_TABLE}} -->
+<!-- 
+| Age band | Frequency |
+|----------|-----------|
+| teens | ? |
+| twenties | ? |
+| thirties | ? |
+| fourties | ? |
+| fifties | ? |
+   ...if other age ranges are present in your data, add rows...
+-->
 
 ## Text corpus
 
 <!-- {{TEXT_CORPUS_DESCRIPTION}} -->
-<!-- An overview of the text corpus -->
+<!-- An overview of the text corpus, with information such as average length (in characters and words) of validated sentences. -->
 
 ### Writing system
 
@@ -127,4 +135,9 @@ There follows a randomly selected sample of five sentences from the corpus.
 
 <!-- {{FUNDING_DESCRIPTION}} -->
 <!-- If you received any funding, you can include the acknowledgement here -->
+
+## Licence
+
+This dataset is released under the [Creative Commons Zero (CC-0)](https://creativecommons.org/public-domain/cc0/) licence. By downloading this data
+you agree to not determine the identity of speakers in the dataset.
 
