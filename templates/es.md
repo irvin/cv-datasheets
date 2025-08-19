@@ -1,5 +1,5 @@
-# {{NATIVE_NAME}} &mdash; {{ENGLISH_NAME}} ({{LOCALE}})
-    Esta ficha técnica corresponde a la versión 23.0 del conjunto de datos de voz guiada de Mozilla Common Voice 
+# *{{NATIVE_NAME}}* &mdash; {{ENGLISH_NAME}} ({{LOCALE}})
+Esta ficha técnica corresponde a la versión 23.0 del conjunto de datos de voz guiada de Mozilla Common Voice 
 para {{ENGLISH_NAME}} ({{LOCALE}}).
 
 ## Idioma
