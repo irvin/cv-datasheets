@@ -190,6 +190,8 @@ take a look at the following links.
 * Francis M. Tyers <ftyers@iu.edu>
 * Kevin B. Unhammer <unhammer@fsfe.org>
 
-### Citation guidelines
+## Licence
 
+This dataset is released under the [Creative Commons Zero (CC-0)](https://creativecommons.org/public-domain/cc0/) licence. By downloading this data
+you agree to not determine the identity of speakers in the dataset.
 
