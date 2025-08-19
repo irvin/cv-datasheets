@@ -45,14 +45,6 @@ Self-declared age information, frequency refers to the number of clips annotated
 
 <!-- {{AGE_TABLE}} -->
 
-### Clips per contributor
-
-The following table shows the statistics of the number of clips recorded per contributor. The first column
-indicates the range, e.g. 0-10 between 1 and 10 clips recorded. The second column is the number of contributors
-who have recorded that number of clips.
-
-<!-- {{CLIPS_TABLE}} -->
-
 ## Text corpus
 
 <!-- {{TEXT_CORPUS_DESCRIPTION}} -->
