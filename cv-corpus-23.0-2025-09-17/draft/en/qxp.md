@@ -1,4 +1,4 @@
-# *<Puno Quechua>* &mdash; Puno Quechua (`qxp`)
+# *<Puno Quechua>* &mdash; Puno Quechua (`qxp`)
 
 This datasheet is for version 23.0 of the the Mozilla Common Voice *Scripted Speech* dataset 
 for Puno Quechua (`qxp`).
@@ -6,10 +6,12 @@ for Puno Quechua (`qxp`).
 ## Language
 
 <!-- {{LANGUAGE_DESCRIPTION}} -->
+<!-- Provide a brief (1-2 paragraph) description of your language -->
 
 ### Variants 
 
 <!-- {{VARIANT_DESCRIPTION}} -->
+<!-- Describe the variants (MCV variants) of your language -->
 
 ### Accents
 
@@ -54,14 +56,17 @@ who have recorded that number of clips.
 ## Text corpus
 
 <!-- {{TEXT_CORPUS_DESCRIPTION}} -->
+<!-- An overview of the text corpus -->
 
 ### Writing system
 
 <!-- {{WRITING_SYSTEM_DESCRIPTION}} -->
+<!-- A description of the writing system (or writing systems) used in the text corpus -->
 
 #### Symbol table
 
 <!-- {{ALPHABET_TABLE}} -->
+<!-- If the writing system is alphabetic, you can include the valid alphabet here -->
 
 ### Sample
 
@@ -72,45 +77,54 @@ There follows a randomly selected sample of five sentences from the corpus.
 ### Sources
 
 <!-- {{SOURCES_LIST}} -->
-
+<!-- A list of sentence sources, can be curated to the top-N -->
 
 ### Text domains
 
 <!-- {{TEXT_DOMAIN_DESCRIPTION}} -->
+<!-- What text domains are represented in the corpus? -->
 
 ### Processing
 
 <!-- {{PROCESSING_DESCRIPTION}} -->
+<!-- How has the text data been processed -->
 
 ### Recommended post-processing
 
 <!-- {{RECOMMENDED_POSTPROCESSING_DESCRIPTION}} -->
+<!-- What should people do before they use the data, for example Unicode normalisation -->
 
 ## Get involved!
 
 ### Community links
 
 <!-- {{COMMUNITY_LINKS_LIST}} -->
+<!-- Links to community chats / fora -->
 
 ### Discussions
 
 <!-- {{DISCUSSION_LINKS_LIST}} -->
+<!-- Any links to discussions, for example on Discourse or other fora or blogs can be included here -->
 
 ### Contribute
 
 <!-- {{CONTRIBUTE_LINKS_LIST}} -->
+<!-- Here you can include links for how to contribute to the dataset -->
 
 ## Acknowledgements
 
 ### Datasheet authors
 
 <!-- {{DATASHEET_AUTHORS_LIST}} -->
+<!-- A list in the format of: Your Name <email@email.com> -->
 
 ### Citation guidelines
 
 <!-- {{CITATION_DESCRIPTION}} -->
+<!-- If you published a paper and would like people to cite it, you can include the BiBTeX here -->
 
 ### Funding
 
 <!-- {{FUNDING_DESCRIPTION}} -->
+<!-- If you received any funding, you can include the acknowledgement here -->
 
