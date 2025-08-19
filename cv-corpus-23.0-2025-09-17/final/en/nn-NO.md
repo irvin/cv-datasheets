@@ -17,31 +17,6 @@ contains Norwegian as spoken anywhere and as written in the Nynorsk standard.
 
 There are currently no variants defined for Norwegian Nynorsk.
 
-### Accents
-
-Predefined accents are selected from a drop-down box, whereas user-defined 
-accents are free form and as defined by the user.
-
-#### Predefined
-
-There are currently no pre-defined accents.
-
-#### User defined
-
-| Accent                                        | Frequency |
-|-----------------------------------------------|-----------|
-| Sørlandet,Sørlænding,Southern,Southern Norway | 261 |
-| sunnhordland | 139 |
-| Nordhordland | 119 |
-| Sørvestlandsk | 38 |
-| Trøndersk,Romsdalsk,Kysttrøndersk | 34 |
-| Hardanger,Vestland | 29 |
-| Amerikas Forente Stater | 18 |
-| Tromsmål | 10 |
-| Østlandsk | 10 |
-| Ungarsk Norsk | 7 |
-| Bergen | 3 |
-
 ## Demographic information
 
 The dataset includes the following distribution of age and gender.
