@@ -17,8 +17,15 @@
 **Usage:**
 
 Generate the draft datasheets:
+
+Scripted:
  
 ```
-python3 generate-datasheet.py metadata/metadata.json templates/en.md cv-corpus-23.0-2025-09-17/draft/en 
+python3 generate-datasheet.py metadata/metadata.json templates/scs/en.md cv-corpus-23.0-2025-09-17/scs/draft/en 
 ```
 
+Spontaneous:
+
+```
+python3 generate-datasheet.py metadata/metadata.json templates/sps/en.md cv-corpus-23.0-2025-09-17/sps/draft/en 
+```
