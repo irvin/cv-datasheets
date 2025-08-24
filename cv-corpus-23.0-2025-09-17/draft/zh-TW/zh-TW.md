@@ -8,7 +8,7 @@ for Chinese (Taiwan) (`zh-TW`).
 <!-- {{LANGUAGE_DESCRIPTION}} -->
 <!-- Provide a brief (1-2 paragraph) description of your language -->
 
-Traditional Chinese text, Taiwan accent.
+繁體中文文字語料，台灣口音。
 
 ### Variants 
 
@@ -19,7 +19,8 @@ Traditional Chinese text, Taiwan accent.
 
 <!-- {{ACCENT_DESCRIPTION}} -->
 
-zh-TW dataset allows speakers to select "birthplace" as predefined accents options, or participants can also input their own accent information.
+目前台語語音資料集中，允許錄音者於口音欄位選擇以下出生地資訊，作為預設口音資料（可選）。
+錄音者亦也可自行輸入其他口音資訊。
 
 - 出生地：基隆市 (birthplace: keelung_city)
 - 出生地：臺北市 (birthplace: taipei_city)
@@ -115,7 +116,7 @@ There follows a randomly selected sample of five sentences from the corpus.
 <!-- {{SOURCES_LIST}} -->
 <!-- A list of sentence sources, can be curated to the top-N -->
 
-Most of the traditional Chinese text corpus is collected by [MozTW CC0 sentences](https://github.com/moztw/cc0-sentences) project.
+大部分繁體中文文本語料整理自：[MozTW CC0 語料庫](https://github.com/moztw/cc0-sentences)。
 
 There are 3573 characters in the corpus, covering about 85.6% of the MOU 2015 common chars data (教育部2015常用字99.75% (3593字)).
 
@@ -145,9 +146,9 @@ Please check the repo for the details info and statistics methods.
 <!-- {{COMMUNITY_LINKS_LIST}} -->
 <!-- Links to community chats / fora -->
 
-Common Voice project page of Mozilla Taiwan Community: [https://moztw.org/commonvoice/](https://moztw.org/commonvoice/)
+MozTW 社群 Common Voice 專案網站： [https://moztw.org/commonvoice/](https://moztw.org/commonvoice/)
 
-If you want to help build the Common Voice dataset for Traditional Chinese, or have any questions or suggestions, please join the following community groups and discuss with us:
+如有任何問題與建議，或有興趣協助推廣、協力建構語料，請加入以下社群群組，與大家一起討論：
 
 - [Telegram group](https://t.me/+gvmHEcAtd-IwNzFl)
 - [Line group](https://line.me/ti/g/_PLyjCSe_8)
@@ -157,7 +158,7 @@ If you want to help build the Common Voice dataset for Traditional Chinese, or h
 <!-- {{DISCUSSION_LINKS_LIST}} -->
 <!-- Any links to discussions, for example on Discourse or other fora or blogs can be included here -->
 
-Related news - [https://hackmd.io/@moztw/common-voice-news](https://hackmd.io/@moztw/common-voice-news)
+相關報導 - [https://hackmd.io/@moztw/common-voice-news](https://hackmd.io/@moztw/common-voice-news)
 
 ### Contribute
 
@@ -171,9 +172,9 @@ Related news - [https://hackmd.io/@moztw/common-voice-news](https://hackmd.io/@m
 <!-- {{DATASHEET_AUTHORS_LIST}} -->
 <!-- A list in the format of: Your Name <email@email.com> -->
 
-Mozilla Taiwan Community, G0v Community, and other open source participants in Taiwan.
+Mozilla 台灣社群、G0v 社群、及其他開放原始碼運動參與者共同建立。  
 
-- Irvin Chen (MozTW Community Liaison) <irvin@moztw.org>
+- Irvin Chen (MozTW 志工聯絡人) <irvin@moztw.org>
 
 ### Citation guidelines
 
@@ -187,5 +188,5 @@ Mozilla Taiwan Community, G0v Community, and other open source participants in T
 
 ## Licence
 
-This dataset is released under the [Creative Commons Zero (CC-0)](https://creativecommons.org/public-domain/cc0/) licence. By downloading this data
-you agree to not determine the identity of speakers in the dataset.
+此資料集以 [Creative Commons Zero (CC-0)](https://creativecommons.org/public-domain/cc0/) 授權釋出至公共領域。
+下載這個資料集，代表你同意不對資料集中的個別發音者進行識別。
